@@ -1,0 +1,6 @@
+@ILA3_0110_HostAddress = http://localhost:5007
+
+GET {{ILA3_0110_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
