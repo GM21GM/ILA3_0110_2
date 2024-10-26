@@ -49,15 +49,26 @@ namespace ILA3_0110.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
-            var student = await _context.Students.Include(s => s.Classroom).FirstOrDefaultAsync(s => s.Id == id);
+            if (_context.Students == null)
+            {
+                return NotFound();
+            }
+
+            var student = await _context.Students.FindAsync(id);
 
             if (student == null)
             {
                 return NotFound();
             }
 
-            return student;
+            return new Student
+            {
+                Id = student.Id,
+               FirstName = student.FirstName,
+               LastName = student.LastName
+            };
         }
+
 
         // PUT: api/students/{id}
         [HttpPut("{id}")]
