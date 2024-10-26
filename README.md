@@ -12,6 +12,12 @@ Teammitglieder: **Gabriel** **Bischof**, Giuliano Martullo
 | -------- | ------- | ------------------------------------------------------------------------ |
 |   23.08.2024       | 0.1       |  Wir haben unsere Planung erstellt und haben mit den ersten Arbeitespaketen angefangen.|
 |30.08.2024|0.2| Wir haben uns anfangs Tag besprochen und haben danach mit dem Abarbeiten der Arbeitspakete weitergemacht|
+|06.09.2024|0.2| Wir haben uns anfangs Tag besprochen und haben danach mit dem Abarbeiten der Arbeitspakete weitergemacht|
+|13.09.2024|0.2| Wir haben uns anfangs Tag besprochen und haben danach mit dem Abarbeiten der Arbeitspakete weitergemacht|
+|14.10.2024|0.2| Wir haben uns anfangs Tag besprochen und haben danach mit dem Abarbeiten der Arbeitspakete weitergemacht|
+|25/26.10.2024|0.2| Wir haben uns anfangs Tag besprochen und haben danach mit dem Abarbeiten der Arbeitspakete weitergemacht|
+
+
 
 ## 1 Informieren
 
@@ -46,7 +52,7 @@ Wir erstellen eine Applikation zur Schulverwaltung. Schüler und Lehrpersonen k�
 | 5    | Benutzer gibt Daten in das Formular ein. | Benutzer übermittelt unvollständige Daten.               | System zeigt eine Fehlermeldung und verweigert das Speichern der unvollständigen Daten. |
 | 6    | Benutzer ist eingeloggt.              | Administrator erstellt eine neue Klasse.                 | Die Klasse wird erfolgreich erstellt und erscheint in der Klassenliste.           |
 | 7    | Schüler und Lehrpersonen sind erfasst. | Lehrer zieht Schüler und Lehrpersonen in eine Klasse.   | Die Zuordnung wird erfolgreich gespeichert, und die Klasse zeigt die korrekten Schüler und Lehrpersonen an. |
-| 8    | Datenbank enthält mehrere Einträge.   | Benutzer sucht nach einem bestimmten Schülernamen.      | Der gesuchte Schüler wird korrekt angezeigt, und die Details sind zugänglich.     |
+| 8    | Datenbank enthält mehrere Einträge.   | Benutzer sucht nach einer bestimmten Schüler ID.      | Der gesuchte Schüler wird korrekt angezeigt, und die Details sind zugänglich.     |
 | 9    | Applikation ist vollständig entwickelt. | Benutzer navigiert durch verschiedene Funktionen.       | Die Applikation läuft stabil und es treten keine Fehler auf.                      |
 
 
@@ -68,7 +74,7 @@ Wir erstellen eine Applikation zur Schulverwaltung. Schüler und Lehrpersonen k�
 
 ## 3 Realisieren
 
-siehe Projektberichte
+Siehe Projektberichte
 
 ## 4 Kontrollieren
 
@@ -80,9 +86,9 @@ siehe Projektberichte
 | 2    |   26.10    | NOK         |  Giuliano Martullo        |
 | 3    |   26.10    | NOK         |  Giuliano Martullo        |
 | 4    |   26.10    | NOK         |  Giuliano Martullo        |
-| 5    |   26.10    | NOK         |  Giuliano Martullo        |
+| 5    |   26.10    | OK         |  Giuliano Martullo        |
 | 6    |   26.10    | NOK         |  Giuliano Martullo        |
 | 7    |   26.10    | NOK         |  Giuliano Martullo        |
-| 8    |   26.10    | NOK         |  Giuliano Martullo        |
+| 8    |   26.10    | OK         |  Giuliano Martullo        |
 | 9    |   26.10    | NOK         |  Giuliano Martullo        |
 
