@@ -4,6 +4,7 @@ using ILA3_0110.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ILA3_0110.Migrations
 {
     [DbContext(typeof(ILA3_0110DbContext))]
-    partial class ILA3_0110DbContextModelSnapshot : ModelSnapshot
+    [Migration("20241027110831_UpdateClassroomAndStudentRelations")]
+    partial class UpdateClassroomAndStudentRelations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

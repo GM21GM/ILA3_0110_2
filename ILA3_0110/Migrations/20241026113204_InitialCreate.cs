@@ -46,8 +46,8 @@ namespace ILA3_0110.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SchoolYearId = table.Column<int>(type: "int", nullable: false),
-                    TeacherId = table.Column<int>(type: "int", nullable: false)
+                    SchoolYearId = table.Column<int>(type: "int", nullable: true), // nullable
+                    TeacherId = table.Column<int>(type: "int", nullable: true) // nullable
                 },
                 constraints: table =>
                 {
@@ -57,13 +57,13 @@ namespace ILA3_0110.Migrations
                         column: x => x.SchoolYearId,
                         principalTable: "SchoolYears",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull); // SetNull
                     table.ForeignKey(
                         name: "FK_Classrooms_Teachers_TeacherId",
                         column: x => x.TeacherId,
                         principalTable: "Teachers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull); // SetNull
                 });
 
             migrationBuilder.CreateTable(
@@ -75,7 +75,7 @@ namespace ILA3_0110.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BirthDate = table.Column<DateOnly>(type: "date", nullable: false),
-                    ClassroomId = table.Column<int>(type: "int", nullable: false)
+                    ClassroomId = table.Column<int>(type: "int", nullable: true) // nullable
                 },
                 constraints: table =>
                 {
@@ -85,7 +85,7 @@ namespace ILA3_0110.Migrations
                         column: x => x.ClassroomId,
                         principalTable: "Classrooms",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.SetNull); // SetNull
                 });
 
             migrationBuilder.CreateIndex(
@@ -121,3 +121,4 @@ namespace ILA3_0110.Migrations
         }
     }
 }
+

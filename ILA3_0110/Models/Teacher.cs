@@ -6,6 +6,7 @@
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Subject { get; set; }
-        public List<Classroom> Classrooms { get; set; } = new List<Classroom>();
+        public List<Classroom> Classrooms { get; set; } = new List<Classroom>();  // Optional, um die Beziehung zu ermöglichen
     }
+
 }

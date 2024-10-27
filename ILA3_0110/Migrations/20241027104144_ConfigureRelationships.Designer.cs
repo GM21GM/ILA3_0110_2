@@ -4,6 +4,7 @@ using ILA3_0110.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ILA3_0110.Migrations
 {
     [DbContext(typeof(ILA3_0110DbContext))]
-    partial class ILA3_0110DbContextModelSnapshot : ModelSnapshot
+    [Migration("20241027104144_ConfigureRelationships")]
+    partial class ConfigureRelationships
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,10 +37,10 @@ namespace ILA3_0110.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("SchoolYearId")
+                    b.Property<int>("SchoolYearId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TeacherId")
+                    b.Property<int>("TeacherId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -77,7 +80,7 @@ namespace ILA3_0110.Migrations
                     b.Property<DateOnly>("BirthDate")
                         .HasColumnType("date");
 
-                    b.Property<int?>("ClassroomId")
+                    b.Property<int>("ClassroomId")
                         .HasColumnType("int");
 
                     b.Property<string>("FirstName")
@@ -125,12 +128,14 @@ namespace ILA3_0110.Migrations
                     b.HasOne("ILA3_0110.Models.SchoolYear", "SchoolYear")
                         .WithMany("Classrooms")
                         .HasForeignKey("SchoolYearId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ILA3_0110.Models.Teacher", "Teacher")
                         .WithMany("Classrooms")
                         .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("SchoolYear");
 
@@ -139,10 +144,13 @@ namespace ILA3_0110.Migrations
 
             modelBuilder.Entity("ILA3_0110.Models.Student", b =>
                 {
-                    b.HasOne("ILA3_0110.Models.Classroom", null)
+                    b.HasOne("ILA3_0110.Models.Classroom", "Classroom")
                         .WithMany("Students")
                         .HasForeignKey("ClassroomId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Classroom");
                 });
 
             modelBuilder.Entity("ILA3_0110.Models.Classroom", b =>

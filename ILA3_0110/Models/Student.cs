@@ -1,4 +1,6 @@
-﻿namespace ILA3_0110.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ILA3_0110.Models
 {
     public class Student
     {
@@ -6,7 +8,8 @@
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateOnly BirthDate { get; set; }
-        public int ClassroomId { get; set; }
-        public Classroom Classroom { get; set; }
+        public int? ClassroomId { get; set; }  // Optional, um Flexibilität zu ermöglichen
     }
+
+
 }

@@ -42,7 +42,7 @@ namespace ILA3_0110.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Student>>> GetStudents()
         {
-            return await _context.Students.Include(s => s.Classroom).ToListAsync(); // Include related classroom data
+            return await _context.Students.Include(s => s.ClassroomId).ToListAsync(); // Include related classroom data
         }
 
         // GET: api/students/{id}
