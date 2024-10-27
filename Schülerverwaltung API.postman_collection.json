@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "536b4a46-68e2-4557-86e1-1f4d21580374",
+		"name": "Schülerverwaltung API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31860277"
+	},
+	"item": [
+		{
+			"name": "Teachers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Max\",\r\n  \"lastName\": \"Mustermann\",\r\n  \"subject\": \"Mathematik\"\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7157/api/Teachers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7157",
+					"path": [
+						"api",
+						"Teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Schoolyears",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"year\": \"2024/2025\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7157/api/Schoolyears",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7157",
+					"path": [
+						"api",
+						"Schoolyears"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Classrooms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"10A\",\r\n    \"schoolYearId\": 3,  // Gültige ID für SchoolYear\r\n    \"teacherId\": 3       // Gültige ID für Teacher\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7157/api/Classrooms",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7157",
+					"path": [
+						"api",
+						"Classrooms"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
